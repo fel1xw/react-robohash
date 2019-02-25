@@ -12,7 +12,8 @@
   "source": "lib/index.tsx",
   "scripts": {
     "build": "microbundle --jsx react",
-    "dev": "microbundle watch --jsx react"
+    "dev": "microbundle watch --jsx react",
+    "prepublishOnly": "microbundle --jsx react"
   },
   "keywords": [
     "react",
