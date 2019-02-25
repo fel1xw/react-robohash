@@ -1,0 +1,27 @@
+{
+  "name": "react-robohash",
+  "version": "1.0.0",
+  "description": "A react component for robohash.org",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "source": "lib/index.tsx",
+  "scripts": {
+    "build": "microbundle --jsx react",
+    "dev": "microbundle watch --jsx react"
+  },
+  "keywords": [
+    "react",
+    "robohash",
+    "react-robohash"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.8.4",
+    "microbundle": "^0.10.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3"
+  }
+}
