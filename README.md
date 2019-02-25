@@ -1,4 +1,4 @@
-![logo](https://robohash.org/react-robohash?bgset=bg1)
+![logo](https://ibb.co/kHL2m3c)
 
 [![npm version](https://badge.fury.io/js/react-robohash.svg)](https://badge.fury.io/js/react-robohash)
 [![Build Status](https://travis-ci.org/fel1xw/react-robohash.svg?branch=master)](https://travis-ci.org/fel1xw/react-robohash)
