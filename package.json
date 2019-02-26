@@ -7,12 +7,10 @@
   ],
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
-  "umd:main": "dist/index.umd.js",
-  "source": "lib/index.tsx",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "microbundle --jsx=react --format=es,umd",
-    "dev": "npm run build --watch",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "prepublishOnly": "npm t && npm run build"
@@ -36,21 +34,20 @@
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.6",
     "@types/node": "^11.9.5",
-    "@types/react": "^16.4.18",
+    "@types/react": "^16.8.5",
     "@types/react-dom": "^16.8.2",
     "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "jest": "^24.1.0",
-    "microbundle": "^0.10.1",
-    "react": "^16.4",
+    "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {
-    "react": "^16.4",
+    "react": "^16.8.3",
     "react-dom": "^16.8.3"
   }
 }
