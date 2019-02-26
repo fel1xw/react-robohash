@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/react-robohash.svg)](https://badge.fury.io/js/react-robohash)
 [![Build Status](https://travis-ci.org/fel1xw/react-robohash.svg?branch=master)](https://travis-ci.org/fel1xw/react-robohash)
 [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/react-robohash)
+[![Coverage Status](https://coveralls.io/repos/github/fel1xw/react-robohash/badge.svg?branch=master)](https://coveralls.io/github/fel1xw/react-robohash?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![gzip size](http://img.badgesize.io/https://unpkg.com/react-robohash@latest/dist/index.js?compression=gzip)](https://unpkg.com/react-robohash@latest/dist/index.js)
 [![Known Vulnerabilities](https://snyk.io/test/github/fel1xw/react-robohash/badge.svg)](https://snyk.io/test/github/fel1xw/react-robohash)
@@ -13,6 +14,19 @@ npm install react-robohash --save
 # or
 yarn add react-robohash
 ```
+
+## Props:
+| Name        | Type            | Required | Default            | Description                                                                 |
+|-------------|-----------------|----------|--------------------|-----------------------------------------------------------------------------|
+| name        | string          | true     |                    | name, email, whatever identifier you want                                   |
+| alt         | string          | false    | `Robohash-${name}` | alt property for image                                                      |
+| className   | string          | false    | Robohash           | pass custom class to <im /> tag                                             |
+| size        | string | number | false    |                    | specify image size like 200 or 100x50 (square works best)                   |
+| set         | string          | false    | 0                  | custom set type of robot generated (see homepage)                           |
+| bgset       | string          | false    | 0                  | custom background set (see homepage)                                        |
+| fileType    | string          | false    | png                | image return type, png, svg, jpg (see homepage)                             |
+| gravatar    | boolean         | false    | false              | checks if gravatar is available otherwise fallbacks to robot                |
+| children    | function        | false    |                    | custom render prop function which gets only the url passed in (see example) |
 
 ## Usage
 ```
@@ -28,8 +42,16 @@ import Robohash from 'react-robohash';
 />
 ```
 
-## Author
+or with custom element as render prop function
+```
+import Robohash from 'react-robohash';
 
+<Robohash name="react-robohash">
+  {url => <span>{url}</span>}
+</Robohash>
+```
+
+## Author
 * Felix Wostal [@felixwostal](https://twitter.com/felixwostal)
 
 ## Support
