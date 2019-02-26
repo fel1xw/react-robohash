@@ -36,12 +36,8 @@ You can play around with the module on [codesandbox](https://codesandbox.io/s/zr
 import Robohash from 'react-robohash';
 
 <Robohash
-  name="react-robohash"
-  fileType="png|svg|jpg"
-  set={1|2|3|4}
-  bgset={1|2|3|4}
-  gravatar={true|false}
-  size={200|200x200}
+  name="foxy"
+  type="cat"
 />
 ```
 
