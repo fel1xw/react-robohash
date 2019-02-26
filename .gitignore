@@ -3,3 +3,4 @@
 /.rts2_cache_cjs/
 /node_modules
 /coverage
+.rts2_cache_es/

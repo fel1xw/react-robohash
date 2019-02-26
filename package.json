@@ -8,11 +8,10 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
-  "module": "dist/index.mjs",
   "source": "lib/index.tsx",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "microbundle --jsx react",
+    "build": "microbundle --jsx=react --format=es,umd",
     "dev": "npm run build --watch",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
