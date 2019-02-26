@@ -9,9 +9,9 @@ const baseProps = {
   alt: 'custom-alt',
   className: 'custom-class',
   size: 200,
-  set: 0,
+  type: 'robot',
   fileType: 'png',
-  bgset: 0,
+  background: 0,
   gravatar: true,
 }
 
@@ -41,7 +41,7 @@ describe('<Robohash />', () => {
     const query = parseToQueryObject(parse(wrapper.find('img').prop('src')!).query!)
     expect(query.bgset).toBe('bg0')
     expect(query.gravatar).toBe('yes')
-    expect(query.set).toBe('set0')
+    expect(query.set).toBe('set1')
     expect(query.size).toBe('200x200')
   })
 
@@ -54,12 +54,36 @@ describe('<Robohash />', () => {
   it('passes no when gravatar is false', () => {
     const wrapper = shallow(<Robohash name="robo" gravatar={false} />)
     const query = parseToQueryObject(parse(wrapper.find('img').prop('src')!).query!)
-    expect(query.gravatar).toBe('no')
+    expect(query.gravatar).not.toBeDefined()
   })
 
   it('has default class and alt value', () => {
     const wrapper = shallow(<Robohash name="robo" />)
     expect(wrapper.find('img').hasClass('Robohash')).toBe(true)
     expect(wrapper.find('img').prop('alt')).toBe('Robohash-robo')
+  })
+
+  it('ignores custom props in query', () => {
+    const wrapper = shallow(<Robohash name="robo" alt="abc" onClick={console.log} />)
+    expect(wrapper.find('img').prop('src')).not.toContain('onClick')
+  })
+
+  it('accepts string or number for type', () => {
+    const cases = [
+      ['robot', 'set1'],
+      ['alien', 'set2'],
+      ['head', 'set3'],
+      ['cat', 'set4'],
+      ['xyz', 'set1'],
+      [1, 'set1'],
+      [2, 'set2'],
+      [3, 'set3'],
+      [4, 'set4'],
+    ]
+
+    cases.forEach(([ type, expected ]) => {
+      const wrapper = shallow(<Robohash name="robo" type={type} />)
+      expect(wrapper.find('img').prop('src')).toContain(expected)
+    })
   })
 })

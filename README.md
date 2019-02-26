@@ -23,10 +23,10 @@ You can play around with the module on [codesandbox](https://codesandbox.io/s/zr
 |-------------|-----------------|----------|--------------------|-----------------------------------------------------------------------------|
 | name        | string          | true     |                    | name, email, whatever identifier you want                                   |
 | alt         | string          | false    | `Robohash-${name}` | alt property for image                                                      |
-| className   | string          | false    | Robohash           | pass custom class to <im /> tag                                             |
+| className   | string          | false    | Robohash           | pass custom class                                                           |
 | size        | string | number | false    |                    | specify image size like 200 or 100x50 (square works best)                   |
-| set         | string          | false    | 0                  | custom set type of robot generated (see homepage)                           |
-| bgset       | string          | false    | 0                  | custom background set (see homepage)                                        |
+| type        | string | number | false    | robot              | type - "robot", "alien", "head", "cat", 1, 2, 3, 4                          |
+| background  | string          | false    | 0                  | custom background set (1, 2)                                                |
 | fileType    | string          | false    | png                | image return type, png, svg, jpg (see homepage)                             |
 | gravatar    | boolean         | false    | false              | checks if gravatar is available otherwise fallbacks to robot                |
 | children    | function        | false    |                    | custom render prop function which gets only the url passed in (see example) |
