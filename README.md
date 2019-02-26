@@ -15,7 +15,10 @@ npm install react-robohash --save
 yarn add react-robohash
 ```
 
-## Props:
+## Playground
+You can play around with the module on [codesandbox](https://codesandbox.io/s/zrpz3jpzp?fontsize=14)
+
+## Props
 | Name        | Type            | Required | Default            | Description                                                                 |
 |-------------|-----------------|----------|--------------------|-----------------------------------------------------------------------------|
 | name        | string          | true     |                    | name, email, whatever identifier you want                                   |
