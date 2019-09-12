@@ -1,4 +1,4 @@
-name: CI
+name: main
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
   test:
     name: Run package tests
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
@@ -21,7 +21,3 @@ jobs:
         npm install
         npm run build
         npm run coveralls
-    - name: Publish package
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-      run: npm publish
