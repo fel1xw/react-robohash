@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   test:
@@ -13,7 +16,10 @@ jobs:
     - name: npm install, build and test
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       run: |
         npm install
         npm run build
         npm run coveralls
+    - name: Publish package
+      run: npm publish
