@@ -1,7 +1,7 @@
 ![logo](https://i.ibb.co/j6CkJV4/react-robohash.png)
 
 [![npm version](https://badge.fury.io/js/react-robohash.svg)](https://badge.fury.io/js/react-robohash)
-[![Build Status](https://travis-ci.org/fel1xw/react-robohash.svg?branch=master)](https://travis-ci.org/fel1xw/react-robohash)
+[![Build Status](https://action-badges.now.sh/fel1xw/react-robohash?action=CI)](https://github.com/fel1xw/react-robohash/actions)
 [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/react-robohash)
 [![Coverage Status](https://coveralls.io/repos/github/fel1xw/react-robohash/badge.svg?branch=master)](https://coveralls.io/github/fel1xw/react-robohash?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
